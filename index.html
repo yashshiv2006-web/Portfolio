@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Srivastava | Software Developer & AI Systems</title>
+  <meta name="description" content="Portfolio of Yash Srivastava - Software Developer, Python Engineer, and AI Systems Architect.">
+  
+  <!-- Typography Stack: Inter Ultra-Bold (Grotesque) + Space Mono & JetBrains Mono (Utility) + Playfair Display (Ampersand) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lenis Inertia Smooth Scroll Library -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Prevent Theme Flash -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('yash_portfolio_theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll Edge Blur Overlays (Top & Bottom Edges Only, Center Remains 100% Sharp) -->
+  <div class="scroll-edge-blur edge-blur-top" id="edgeBlurTop" aria-hidden="true"></div>
+  <div class="scroll-edge-blur edge-blur-bottom" id="edgeBlurBottom" aria-hidden="true"></div>
+
+  <!-- Custom Trailing Cursor Elements -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+  <div class="custom-cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- Floating Cursor-Following Speech Bubble Tooltip for Project Cards (Like Caramove) -->
+  <div class="floating-project-tooltip" id="projectTooltip" aria-hidden="true">
+    <span class="tooltip-badge-label" id="tooltipBadge">You</span>
+    <p class="tooltip-main-text" id="tooltipText">Read the case study</p>
+    <span class="tooltip-arrow-icon">→</span>
+  </div>
+
+  <!-- Floating Social Sidebar (Right Side with Proper Padding Clearance) -->
+  <aside class="social-sidebar" aria-label="Social Links">
+    <a href="https://github.com/yashshiv2006-web" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub" data-cursor="hover">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/yash-srivastava-691a2337a" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn" data-cursor="hover">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+      </svg>
+    </a>
+    <a href="mailto:yashshiv2006@gmail.com" class="social-icon-btn" title="Send Email" data-cursor="hover">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+      </svg>
+    </a>
+    <a href="tel:+918126463927" class="social-icon-btn" title="Call Yash" data-cursor="hover">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 22.621l-3.521-6.795 3.197-2.818c-.312-4.133-3.655-7.476-7.788-7.788l-2.818 3.197-6.795-3.521 1.779-4.896h5.946c9.941 0 18 8.059 18 18v5.946l-4.896 1.779c-.035-.3-.07-.6-.104-.904z"/>
+      </svg>
+    </a>
+  </aside>
+
+  <!-- Top Navigation Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" data-cursor="hover">
+        <span class="brand-text">DevByYash</span>
+      </a>
+
+      <div class="nav-widgets">
+        <!-- Multi-Theme Switcher (Parchment Light, Dark Noir, Dark Midnight OLED) -->
+        <div class="theme-switcher-group" role="radiogroup" aria-label="Visual Theme Switcher">
+          <button type="button" class="theme-btn active" data-theme="light" title="Light Parchment Theme" data-cursor="hover">
+            <span class="theme-icon">☼</span>
+            <span class="theme-label">PARCHMENT</span>
+          </button>
+          <button type="button" class="theme-btn" data-theme="dark-noir" title="Dark Noir Theme" data-cursor="hover">
+            <span class="theme-icon">☾</span>
+            <span class="theme-label">NOIR</span>
+          </button>
+          <button type="button" class="theme-btn" data-theme="dark-midnight" title="Dark Midnight OLED Theme" data-cursor="hover">
+            <span class="theme-icon">✦</span>
+            <span class="theme-label">MIDNIGHT</span>
+          </button>
+        </div>
+
+        <div class="widget-pill status-widget">
+          <span class="user-icon">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </span>
+          <span>1 ACTIVE USER</span>
+        </div>
+
+        <a href="#contact" class="widget-pill message-widget" data-cursor="hover">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+            <path d="M20 2h-16c-1.1 0-1.99.9-1.99 2l-.01 18 4-4h14c1.1 0 2-.9 2-2v-12c0-1.1-.9-2-2-2zm-2 10h-12v-2h12v2zm0-3h-12v-2h12v2zm0-3h-12v-2h12v2z"/>
+          </svg>
+          <span>MESSAGES</span>
+        </a>
+
+        <div class="widget-pill star-widget">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path d="M12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0l-1.89 4.46-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.51z"/>
+          </svg>
+          <span>2026</span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#about" data-cursor="hover">ABOUT</a>
+          <a href="#skills" data-cursor="hover">SKILLS</a>
+          <a href="#projects" data-cursor="hover">PROJECTS</a>
+          <a href="#certifications" data-cursor="hover">CERTIFICATES</a>
+          <a href="#testimonials" data-cursor="hover">ENDORSEMENTS</a>
+          <a href="#contact" data-cursor="hover">CONTACT</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Hero / Header -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-left">
+          <div class="mask-reveal-wrap">
+            <h1 class="hero-main-title reveal-text">
+              SOFTWARE<br>DEVELOPER
+            </h1>
+            <div class="hero-aspiring-tag">
+              <span class="aspiring-badge">ASPIRING</span>
+              <span class="aspiring-sep">/</span>
+              <span class="aspiring-text">Computer Science Undergrad Student</span>
+            </div>
+          </div>
+
+          <div class="tech-tags staggered-group">
+            <span class="tag-pill">PYTHON</span>
+            <span class="tag-pill">MACHINE LEARNING</span>
+            <span class="tag-pill">AI DEPLOYMENT</span>
+            <span class="tag-pill">FLASK</span>
+            <span class="tag-pill">DSA</span>
+          </div>
+
+          <!-- Mountain Photo Frame - Properly Cropped & Centered on Yash -->
+          <div class="photo-frame-wrapper parallax-hero-frame">
+            <div class="bracket top-left"></div>
+            <div class="bracket top-right"></div>
+            <div class="bracket bottom-left"></div>
+            <div class="bracket bottom-right"></div>
+            
+            <div class="photo-container" data-cursor="hover">
+              <img src="assets/mountain_profile_focused.jpg" alt="Yash Srivastava on a mountain trek with arms wide open" class="profile-mountain-img" id="heroProfileImg">
+              <div class="photo-overlay-tag">
+                <span class="geo-pin">📍</span> ELEVATING TECH & ARCHITECTURE
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-subline">
+            <span class="arrow-right">→</span>
+            <span class="mono-label">BASED IN GURUGRAM & UTTAR PRADESH, INDIA</span>
+          </div>
+        </div>
+
+        <!-- Right Hero Content - Correct Spacing and Position -->
+        <div class="hero-right">
+          <div class="status-badge-container">
+            <div class="badge-open-work">
+              <span class="pulse-dot"></span>
+              <span>OPEN FOR OPPORTUNITIES</span>
+            </div>
+            <div class="index-number">
+              01 / FROM GURUGRAM WITH VISION
+            </div>
+          </div>
+
+          <div class="hero-description">
+            <p class="lead-statement">
+              BUILDING IMPACTFUL PYTHON SYSTEMS & AGRO-METEOROLOGICAL PLATFORMS. PASSIONATE ABOUT MACHINE LEARNING & BRINGING INTELLIGENT MODELS TO LIFE THROUGH PRODUCTION AI DEPLOYMENT.
+            </p>
+            <p class="sub-statement">
+              B.TECH COMPUTER SCIENCE & ENGINEERING • IILM UNIVERSITY<br>
+              OPEN FOR INTERNSHIPS / RESEARCH COLLABORATIONS / OPEN SOURCE
+            </p>
+          </div>
+
+          <div class="hero-author-box">
+            <div class="mask-reveal-wrap">
+              <h2 class="hero-author-name reveal-text">
+                YASH<br>SRIVASTAVA
+              </h2>
+            </div>
+            <div class="hero-time-stamp">
+              <span>IST • 2026 ACTIVE EDITION</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Large Typography Divider - Continuous News Ticker Marquee -->
+    <section class="statement-band" aria-label="Expertise Ticker">
+      <div class="marquee-track">
+        <!-- Sequence 1 -->
+        <div class="marquee-item">
+          <span class="heavy-text">Python Dev</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">AI Systems</span>
+        </div>
+        <span class="marquee-divider">•</span>
+        <div class="marquee-item">
+          <span class="heavy-text">Machine Learning</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">AI Deployment</span>
+        </div>
+        <span class="marquee-divider">•</span>
+        <div class="marquee-item">
+          <span class="heavy-text">Algorithms</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">Architecture</span>
+        </div>
+        <span class="marquee-divider">•</span>
+        <div class="marquee-item">
+          <span class="heavy-text">Data Logic</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">Web Platforms</span>
+        </div>
+        <span class="marquee-divider">•</span>
+        <div class="marquee-item">
+          <span class="heavy-text">IVR Telephony</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">Agro Tech</span>
+        </div>
+        <span class="marquee-divider">•</span>
+
+        <!-- Sequence 2 (Duplicate for seamless infinite ticker) -->
+        <div class="marquee-item">
+          <span class="heavy-text">Python Dev</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">AI Systems</span>
+        </div>
+        <span class="marquee-divider">•</span>
+        <div class="marquee-item">
+          <span class="heavy-text">Machine Learning</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">AI Deployment</span>
+        </div>
+        <span class="marquee-divider">•</span>
+        <div class="marquee-item">
+          <span class="heavy-text">Algorithms</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">Architecture</span>
+        </div>
+        <span class="marquee-divider">•</span>
+        <div class="marquee-item">
+          <span class="heavy-text">Data Logic</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">Web Platforms</span>
+        </div>
+        <span class="marquee-divider">•</span>
+        <div class="marquee-item">
+          <span class="heavy-text">IVR Telephony</span>
+          <span class="ampersand">&</span>
+          <span class="heavy-text">Agro Tech</span>
+        </div>
+        <span class="marquee-divider">•</span>
+      </div>
+    </section>
+
+    <!-- Section 3: About & Skills -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-num">02 // PROFILE</span>
+          <div class="mask-reveal-wrap">
+            <h2 class="section-title reveal-text">BACKGROUND & EDUCATION</h2>
+          </div>
+          <p class="section-subtitle">Disciplined computer science scholar blending mathematical analytical thinking with Python systems.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card intro-card reveal-on-scroll" data-cursor="hover">
+            <div class="card-badge">PHILOSOPHY</div>
+            <h3>DRIVEN BY MACHINE LEARNING & ACCESSIBLE AI DEPLOYMENT</h3>
+            <p>
+              I am a motivated first-year <strong>B.Tech Computer Science & Engineering</strong> student at <strong>IILM University, Gurugram (2025–29)</strong>. Deeply intrigued by <strong>Machine Learning (ML)</strong> and passionate about <strong>AI Deployment</strong>, I build solutions that bridge the gap between theoretical algorithms and real-world citizens — from disaster broadcast voice IVR systems to low-latency Python backends.
+            </p>
+            <div class="metric-row">
+              <div class="metric-box">
+                <span class="metric-value">7.9–8.0</span>
+                <span class="metric-name">IILM CGPA</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-value">AIgnite</span>
+                <span class="metric-name">ACTIVE TECH CLUB</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-value">SIH '25</span>
+                <span class="metric-name">HACKATHON SCHOLAR</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card edu-card reveal-on-scroll" data-cursor="hover">
+            <div class="card-badge">ACADEMIC JOURNEY</div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-year">2025 – 2029</span>
+                  <span class="timeline-status">PURSUING</span>
+                </div>
+                <div class="timeline-content">
+                  <h4>B.Tech in Computer Science & Engineering</h4>
+                  <p class="institute-name">IILM University, Gurugram</p>
+                  <p class="timeline-detail">First Semester CGPA: 7.9 | Projected: 8.0 • Active contributor at university technical club <strong>AIgnite</strong>.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-year">2025</span>
+                  <span class="timeline-score">80%</span>
+                </div>
+                <div class="timeline-content">
+                  <h4>Class XII (Senior Secondary)</h4>
+                  <p class="institute-name">The Cambridge Senior Secondary School, Dehradun</p>
+                  <p class="timeline-detail">Core Science, Physics, Chemistry, and Advanced Mathematics.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-year">2023</span>
+                  <span class="timeline-score">85%</span>
+                </div>
+                <div class="timeline-content">
+                  <h4>Class X (Secondary School)</h4>
+                  <p class="institute-name">Sacred Hearts School, Bareilly, Uttar Pradesh</p>
+                  <p class="timeline-detail">High academic distinction with foundational computer literacy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cognitive Skills Row -->
+        <div class="cognitive-container reveal-on-scroll">
+          <div class="cognitive-header">
+            <span class="mono-label">COGNITIVE & COLLABORATIVE FOUNDATIONS</span>
+          </div>
+          <div class="cognitive-grid staggered-group">
+            <div class="cognitive-chip" data-cursor="hover">
+              <span class="chip-icon">🧠</span>
+              <div>
+                <strong>Analytical Thinking</strong>
+                <p>Translating complex multi-variable problems into modular algorithmic code.</p>
+              </div>
+            </div>
+            <div class="cognitive-chip" data-cursor="hover">
+              <span class="chip-icon">🗣️</span>
+              <div>
+                <strong>Effective Communication</strong>
+                <p>Articulating technical architectural choices cleanly in team settings.</p>
+              </div>
+            </div>
+            <div class="cognitive-chip" data-cursor="hover">
+              <span class="chip-icon">⏱️</span>
+              <div>
+                <strong>Self-Management</strong>
+                <p>Disciplined iteration, deadline adherence, and consistent curiosity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section with SVG / Brand Logos -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-num">03 // STACK</span>
+          <div class="mask-reveal-wrap">
+            <h2 class="section-title reveal-text">TECHNICAL ARSENAL</h2>
+          </div>
+          <p class="section-subtitle">Core languages, version control systems, and in-progress engineering proficiencies.</p>
+        </div>
+
+        <div class="skills-wrapper">
+          
+          <!-- Core Languages & Tools -->
+          <div class="skill-category">
+            <div class="category-header">
+              <span class="cat-tag">PRIMARY PROFICIENCIES</span>
+              <h3>Core Languages & Environment</h3>
+            </div>
+            
+            <div class="skills-cards-grid staggered-group">
+              
+              <!-- Python -->
+              <div class="skill-card" data-cursor="hover">
+                <div class="skill-icon-wrapper python-color">
+                  <svg viewBox="0 0 128 128" class="brand-svg">
+                    <path fill="#3776AB" d="M63.75 3c-16.7 0-31.25 2.1-31.25 15.65v11.45h31.25v3.9H20.35C5.8 34 0 46.5 0 63.75c0 17.5 7.15 30 21.6 30.65h12.5v-14.8c0-16.1 13.55-15.65 30-15.65h15.6V39.5c0-13.55-13.85-36.5-16-36.5zm-8.8 8.45c2.55 0 4.6 2.05 4.6 4.6 0 2.55-2.05 4.6-4.6 4.6-2.55 0-4.6-2.05-4.6-4.6 0-2.55 2.05-4.6 4.6-4.6z"/>
+                    <path fill="#FFD43B" d="M64.25 125c16.7 0 31.25-2.1 31.25-15.65v-11.45H64.25V94h43.4c14.55 0 20.35-12.5 20.35-29.75 0-17.5-7.15-30-21.6-30.65H93.9v14.8c0 16.1-13.55 15.65-30 15.65H48.3v24.45c0 13.55 13.85 36.5 15.95 36.5zm8.8-8.45c-2.55 0-4.6-2.05-4.6-4.6 0-2.55 2.05-4.6 4.6-4.6 2.55 0 4.6 2.05 4.6 4.6 0 2.55-2.05 4.6-4.6 4.6z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>Python</h4>
+                  <span class="skill-status active">ADVANCED BASE</span>
+                  <p>Object-Oriented, Scripting, Automation, AI Integrations, Data Manipulation.</p>
+                </div>
+              </div>
+
+              <!-- Java -->
+              <div class="skill-card" data-cursor="hover">
+                <div class="skill-icon-wrapper java-color">
+                  <svg viewBox="0 0 128 128" class="brand-svg">
+                    <path fill="#EA2D42" d="M46.7 94.6s-6.3 3.6 4.5 4.9c13.1 1.5 19.9 1.3 34.6-.7 0 0 4.1 2.6 9.3 4.8-31 13.4-69-1.9-48.4-9zm-4.3-15.5s-7 4.9 4.3 6.4c14.8 2 26.6 2.2 46.1-.8 0 0 2.9 2.9 6.5 4.4-38.3 12.3-78.7.6-56.9-10zM61.9 47c3.8 4.4 5.7 8.3-5.5 21.2-8.9 10.3-4.3 16.1-4.3 16.1s-11.3-5.8-3.9-15.2c8.6-10.9 9.9-13.9-5-22.3-4.7-2.6-8.2-6.5-8.2-6.5s15.9 1.4 26.9 6.7zm28.8 40.5c-4.4 2.8-10.4 4.8-17.5 5.8 6.2-4.4 11.4-9.3 11.4-9.3s8.8 1.9 6.1 3.5z"/>
+                    <path fill="#5382A1" d="M84.4 75.3c14.4-8.8 7.7-18.7 7.7-18.7s-2.1 2.3-7.5 4.6c-5.9 2.5-12.8 3.5-20.9 3.2 0 0-3.3 2.5-2.5 4.6 12.8 1.2 26 1.7 23.2 6.3zm4.7-32.9c3.3 5.4 1.1 12.4-7.5 17.5 0 0 1.9-2.3.9-4.8-1.5-3.6-7.8-6.4-11.6-8 0 0 7.8-2 18.2-4.7z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>Java</h4>
+                  <span class="skill-status active">OOP FOUNDATIONS</span>
+                  <p>Robust OOP patterns, class hierarchies, algorithmic implementations.</p>
+                </div>
+              </div>
+
+              <!-- C Language -->
+              <div class="skill-card" data-cursor="hover">
+                <div class="skill-icon-wrapper c-color">
+                  <svg viewBox="0 0 128 128" class="brand-svg">
+                    <path fill="#A8B9CC" d="M117.5 86.8c-7.9 13.8-23.3 23-40.8 23-26.3 0-47.7-21.4-47.7-47.7 0-26.3 21.4-47.7 47.7-47.7 17.5 0 32.9 9.2 40.8 23l14.9-8.6C120.7 10.3 97 0 76.7 0 34.3 0 0 34.3 0 76.7c0 42.4 34.3 76.7 76.7 76.7 20.3 0 44-10.3 55.7-28.8l-14.9-7.8z"/>
+                    <path fill="#00599C" d="M80.2 45.4c-17.3 0-31.3 14-31.3 31.3 0 17.3 14 31.3 31.3 31.3 11.5 0 21.6-6.1 27.2-15.3l-12.5-7.2c-3.1 4.7-8.5 7.7-14.7 7.7-9.7 0-17.5-7.8-17.5-17.5 0-9.7 7.8-17.5 17.5-17.5 6.2 0 11.6 3 14.7 7.7l12.5-7.2c-5.6-9.2-15.7-15.3-27.2-15.3z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>C Language</h4>
+                  <span class="skill-status active">CORE SYSTEMS</span>
+                  <p>Memory models, pointers, procedural logic, low-level execution concepts.</p>
+                </div>
+              </div>
+
+              <!-- Git & GitHub -->
+              <div class="skill-card" data-cursor="hover">
+                <div class="skill-icon-wrapper git-color">
+                  <svg viewBox="0 0 128 128" class="brand-svg">
+                    <path fill="#F05032" d="M125.7 57.5L70.5 2.3c-3-3-8-3-11 0L49.1 12.7l14 14c3.2-1.1 7-.3 9.5 2.2 2.5 2.5 3.3 6.3 2.2 9.5l13.5 13.5c3.2-1.1 7-.3 9.5 2.2 3.6 3.6 3.6 9.4 0 13s-9.4 3.6-13 0c-2.7-2.7-3.4-6.8-2-9.9L68.5 41.9v35.3c1.4.7 2.6 1.7 3.5 3 3.6 3.6 3.6 9.4 0 13s-9.4 3.6-13 0c-3.6-3.6-3.6-9.4 0-13 1.2-1.2 2.6-2 4.1-2.5V41.4c-1.5-.5-2.9-1.3-4.1-2.5-2.7-2.7-3.4-6.8-2.1-10L42.9 14.9 2.3 55.5c-3 3-3 8 0 11l55.2 55.2c3 3 8 3 11 0l57.2-57.2c3.1-3 3.1-8 0-11z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>Git & GitHub</h4>
+                  <span class="skill-status active">VERSION CONTROL</span>
+                  <p>Commit lifecycles, branching workflows, remote repositories, collaboration.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- In-Working / Expanding Technologies -->
+          <div class="skill-category">
+            <div class="category-header">
+              <span class="cat-tag progress-tag">IN-PROGRESS & FOCUS EXPANSION</span>
+              <h3>Active Mastery & Architectures</h3>
+            </div>
+            
+            <div class="skills-cards-grid six-grid staggered-group">
+              
+              <!-- Machine Learning (ML) -->
+              <div class="skill-card highlight-ml" data-cursor="hover">
+                <div class="skill-icon-wrapper ml-color">
+                  <svg viewBox="0 0 24 24" class="brand-svg" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="5" cy="6" r="2.5" fill="currentColor" fill-opacity="0.2"/>
+                    <circle cx="5" cy="18" r="2.5" fill="currentColor" fill-opacity="0.2"/>
+                    <circle cx="12" cy="12" r="2.5" fill="currentColor" fill-opacity="0.2"/>
+                    <circle cx="19" cy="6" r="2.5" fill="currentColor" fill-opacity="0.2"/>
+                    <circle cx="19" cy="18" r="2.5" fill="currentColor" fill-opacity="0.2"/>
+                    <line x1="7.5" y1="7" x2="9.8" y2="10.8"/>
+                    <line x1="7.5" y1="17" x2="9.8" y2="13.2"/>
+                    <line x1="14.2" y1="10.8" x2="16.5" y2="7"/>
+                    <line x1="14.2" y1="13.2" x2="16.5" y2="17"/>
+                    <line x1="7.5" y1="6" x2="16.5" y2="6" stroke-dasharray="2 2"/>
+                    <line x1="7.5" y1="18" x2="16.5" y2="18" stroke-dasharray="2 2"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>Machine Learning</h4>
+                  <span class="skill-status active ml-badge">CORE INTEREST & STUDY</span>
+                  <p>Model architectures, training intuition, predictive pipelines, scikit-learn & neural networks.</p>
+                </div>
+              </div>
+
+              <!-- AI Deployment & Serving -->
+              <div class="skill-card highlight-deploy" data-cursor="hover">
+                <div class="skill-icon-wrapper deploy-color">
+                  <svg viewBox="0 0 24 24" class="brand-svg" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/>
+                    <polyline points="8 16 12 12 16 16"/>
+                    <line x1="12" y1="12" x2="12" y2="21"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>AI Deployment</h4>
+                  <span class="skill-status active ai-deploy-badge">ACTIVE PASSION</span>
+                  <p>Production model serving, RESTful APIs via Flask/FastAPI, low-latency inference pipelines & voice telephony.</p>
+                </div>
+              </div>
+
+              <!-- Flask -->
+              <div class="skill-card highlight-working" data-cursor="hover">
+                <div class="skill-icon-wrapper flask-color">
+                  <svg viewBox="0 0 128 128" class="brand-svg">
+                    <path fill="#0f1012" d="M84.7 2.1v21.2h-4.3V9.5H47.6v13.8h-4.3V2.1h41.4zM40 34.6c-4.4 7-6.9 15.2-6.9 24.1 0 25.1 19.8 45.6 44.5 46.5v9.3h-8.7v4.3h21.8v-4.3H82v-9.3c24.7-.9 44.5-21.4 44.5-46.5 0-8.9-2.5-17.1-6.9-24.1H40zm4.7 6.4h74.6c3.2 5.5 5 11.9 5 18.7 0 20.7-16.8 37.5-37.5 37.5s-37.5-16.8-37.5-37.5c0-6.8 1.8-13.2 5-18.7z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>Flask</h4>
+                  <span class="skill-status in-progress">ACTIVE • IN-WORKING</span>
+                  <p>Lightweight Python web frameworks, routing, REST endpoints, templates.</p>
+                </div>
+              </div>
+
+              <!-- DSA -->
+              <div class="skill-card highlight-working" data-cursor="hover">
+                <div class="skill-icon-wrapper dsa-color">
+                  <svg viewBox="0 0 24 24" class="brand-svg" fill="currentColor">
+                    <circle cx="12" cy="4" r="3"/>
+                    <circle cx="5" cy="19" r="3"/>
+                    <circle cx="19" cy="19" r="3"/>
+                    <path d="M12 7v5m0 0l-5 4m5-4l5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>Data Structures & Algorithms</h4>
+                  <span class="skill-status in-progress">ACTIVE • IN-WORKING</span>
+                  <p>Arrays, linked lists, stacks, queues, recursion, sorting, search algorithms.</p>
+                </div>
+              </div>
+
+              <!-- SQL -->
+              <div class="skill-card highlight-working" data-cursor="hover">
+                <div class="skill-icon-wrapper sql-color">
+                  <svg viewBox="0 0 24 24" class="brand-svg" fill="currentColor">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>SQL & Relational DBs</h4>
+                  <span class="skill-status in-progress">ACTIVE • IN-WORKING</span>
+                  <p>Query design, schema structure, joins, filtering, data normalization.</p>
+                </div>
+              </div>
+
+              <!-- MS Office Tools -->
+              <div class="skill-card" data-cursor="hover">
+                <div class="skill-icon-wrapper office-color">
+                  <svg viewBox="0 0 24 24" class="brand-svg" fill="currentColor">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm0-4H7v-2h5v2zm0-4H7V7h5v2zm5 8h-3v-2h3v2zm0-4h-3v-2h3v2zm0-4h-3V7h3v2z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4>MS Office Suite</h4>
+                  <span class="skill-status active">PROFICIENT</span>
+                  <p>Excel data models & analytics, PowerPoint visual technical briefs.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Featured Work / Projects -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-num">04 // CREATIONS</span>
+          <div class="mask-reveal-wrap">
+            <h2 class="section-title reveal-text">ENGINEERED PROJECTS</h2>
+          </div>
+          <p class="section-subtitle">From large-scale telephonic AI architectures to foundational Python utilities.</p>
+        </div>
+
+        <!-- Flagship Project: WeatherGPT with Scroll-Scale Mockup -->
+        <div class="flagship-card reveal-on-scroll" data-cursor="hover" data-tooltip-badge="WeatherGPT" data-tooltip-text="Launch Live App (weathergpt.duckdns.org) ↗">
+          <div class="flagship-badge-header">
+            <div class="badge-header-left">
+              <span class="badge-featured">★ FLAGSHIP AI PLATFORM</span>
+              <a href="https://weathergpt.duckdns.org/" target="_blank" rel="noopener noreferrer" class="badge-live-status" data-cursor="hover" title="Open Live Instance">
+                <span class="live-dot-pulse"></span>
+                <span>LIVE INSTANCE</span>
+                <span class="live-arrow">↗</span>
+              </a>
+            </div>
+            <span class="flagship-year">2026 ARCHITECTURE</span>
+          </div>
+          <div class="flagship-content-grid">
+            <div class="flagship-details">
+              <h3 class="flagship-title">WeatherGPT</h3>
+              <p class="flagship-tagline">Multilingual AI-Powered IVR Telephony Platform for Agro-Meteorological Advisory & Disaster Broadcast</p>
+              <p class="flagship-desc">
+                WeatherGPT is an AI-powered multilingual Interactive Voice Response (IVR) telephony platform engineered to bridge critical information gaps for rural agrarian communities. It delivers precise, automated agro-meteorological advisory and emergency disaster broadcasts based on real climate telemetry fetched directly from official Indian Meteorological Department (IMD) sources, combined with domain-verified agro advisories from the <strong>Indian Council of Agricultural Research (ICAR)</strong> and <strong>State Krishi Vigyan Kendras (KVKs)</strong>.
+              </p>
+              <div class="flagship-highlights">
+                <div class="highlight-item">
+                  <span class="hl-bullet">▹</span>
+                  <span><strong>Official IMD Data Ingestion:</strong> Real-time climate telemetry parsing for early alerts.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="hl-bullet">▹</span>
+                  <span><strong>ICAR & State KVKs Advisory:</strong> Scientifically backed crop & livestock recommendations.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="hl-bullet">▹</span>
+                  <span><strong>Multilingual IVR Telephony:</strong> Inclusive voice interface accessible even on basic feature phones.</span>
+                </div>
+              </div>
+              <div class="flagship-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AI / NLP</span>
+                <span class="tech-tag">IVR Telephony</span>
+                <span class="tech-tag">IMD Weather API</span>
+                <span class="tech-tag">ICAR & KVKs</span>
+                <span class="tech-tag">Agro-Meteorology</span>
+              </div>
+              <div class="flagship-cta-row">
+                <a href="https://weathergpt.duckdns.org/" target="_blank" rel="noopener noreferrer" class="flagship-launch-btn" data-cursor="hover">
+                  <span class="launch-icon">🌐</span>
+                  <span>EXPLORE LIVE PLATFORM</span>
+                  <span class="btn-arrow">↗</span>
+                </a>
+                <span class="flagship-url-mono">weathergpt.duckdns.org</span>
+              </div>
+            </div>
+            
+            <div class="flagship-visual">
+              <div class="mockup-screen scroll-scale-target" id="mockupScreen">
+                <div class="mockup-header">
+                  <div class="screen-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="screen-title">WEATHERGPT // IVR TELEPHONY ENGINE</span>
+                </div>
+                <div class="mockup-body">
+                  <div class="code-line status-url"><span class="cmd-prompt">&gt;</span> <span class="url-label">LIVE HOST:</span> <a href="https://weathergpt.duckdns.org/" target="_blank" rel="noopener noreferrer" class="terminal-link">https://weathergpt.duckdns.org/</a> <span class="url-badge">[ONLINE]</span></div>
+                  <div class="code-line"><span class="cmd-prompt">$</span> initialize_telephony_gateway --provider IVR</div>
+                  <div class="code-line status-ok">[STATUS] IMD Climate Stream: CONNECTED (2026)</div>
+                  <div class="code-line status-ok">[STATUS] ICAR / KVK Advisory: VERIFIED</div>
+                  <div class="code-line status-data">[DISPATCH] Multilingual Voice Pipeline: READY</div>
+                  <div class="code-quote">
+                    "Alert: Pre-monsoon showers expected in coastal belt. KVK advisory: ensure drainage in paddy nursery."
+                  </div>
+                  <div class="audio-wave">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Featured Project: AAYAS -->
+        <div class="secondary-project-card reveal-on-scroll" data-cursor="hover" data-tooltip-badge="AAYAS" data-tooltip-text="Explore the Odisha supply chain case study">
+          <div class="card-inner">
+            <div class="sec-proj-header">
+              <div>
+                <span class="sub-label">GOVT. OF ODISHA INITIATIVE</span>
+                <h3 class="sec-proj-title">AAYAS</h3>
+              </div>
+              <span class="sec-tag">SUPPLY CHAIN TRANSPARENCY</span>
+            </div>
+            <p class="sec-proj-desc">
+              A comprehensive technological solution developed for supply chain transparency in agricultural produce distribution, aligning farmer fair pricing, logistics verification, and institutional tracking for the Government of Odisha.
+            </p>
+            <div class="flagship-tags">
+              <span class="tech-tag">Agricultural Logistics</span>
+              <span class="tech-tag">Transparency Protocol</span>
+              <span class="tech-tag">Data Tracking</span>
+              <span class="tech-tag">SIH Track</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python Project Showcase (Basic to Advanced) -->
+        <div class="python-showcase-container reveal-on-scroll">
+          <div class="showcase-header">
+            <div>
+              <span class="mono-label">EXPLORE REPOSITORIES</span>
+              <h3 class="showcase-title">Python Projects Showcase: Basic → Advanced</h3>
+            </div>
+            <p class="showcase-desc">A structured collection of hands-on Python programs spanning fundamental command-line utilities, file manipulators, and automated AI voice assistants.</p>
+          </div>
+
+          <div class="tiers-grid">
+
+            <!-- Tier 1: Fundamentals -->
+            <div class="tier-column">
+              <div class="tier-badge level-basic">LEVEL 01: BASIC UTILITIES</div>
+              <p class="tier-summary">Foundational algorithmic logic, control flows, and mathematical operations.</p>
+              
+              <ul class="project-list">
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">EasyCalculator</span>
+                    <span class="proj-category">Math Engine</span>
+                  </div>
+                  <p class="proj-detail">Interactive arithmetic tool handling multi-operation calculations cleanly.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Email_Slicing</span>
+                    <span class="proj-category">String Processing</span>
+                  </div>
+                  <p class="proj-detail">Parses input email strings into username and domain tokens with validation.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Gussing_Number</span>
+                    <span class="proj-category">Logic Game</span>
+                  </div>
+                  <p class="proj-detail">Algorithmic binary-search inspired interactive guessing game with score tracking.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Roll_the_Dice</span>
+                    <span class="proj-category">Probability</span>
+                  </div>
+                  <p class="proj-detail">Pseudorandom number generator simulating multi-sided dice rolls and statistics.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Weight_Calculator</span>
+                    <span class="proj-category">Metric Converter</span>
+                  </div>
+                  <p class="proj-detail">Bi-directional conversion engine for imperial and metric mass units.</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tier 2: Intermediate / Medium -->
+            <div class="tier-column">
+              <div class="tier-badge level-med">LEVEL 02: INTERMEDIATE SYSTEMS</div>
+              <p class="tier-summary">Automation scripts, API integration, data persistence, and GUI/CLI utilities.</p>
+              
+              <ul class="project-list">
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">MediumHydration_reminder</span>
+                    <span class="proj-category">Scheduler</span>
+                  </div>
+                  <p class="proj-detail">Background timer with desktop notifications encouraging periodic wellness habits.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Kaun_Banega_Crorepati</span>
+                    <span class="proj-category">Quiz Engine</span>
+                  </div>
+                  <p class="proj-detail">Full-fledged trivia CLI replica featuring tiered prize pools and lifeline mechanics.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">News_app</span>
+                    <span class="proj-category">API Integration</span>
+                  </div>
+                  <p class="proj-detail">Real-time news aggregator fetching categorical headlines via REST APIs.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Password_Manager</span>
+                    <span class="proj-category">Security / Vault</span>
+                  </div>
+                  <p class="proj-detail">Local credential storage utility with password generation and encrypted handling.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Pdf_Merger</span>
+                    <span class="proj-category">Document Automation</span>
+                  </div>
+                  <p class="proj-detail">Batch merges multiple multi-page PDF documents into a unified output file.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Student_Data_management</span>
+                    <span class="proj-category">CRUD Records</span>
+                  </div>
+                  <p class="proj-detail">Record persistence tool for student scores, roll numbers, and grade computation.</p>
+                </li>
+                <li class="project-item" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Url_to_QR</span>
+                    <span class="proj-category">Graphics Generator</span>
+                  </div>
+                  <p class="proj-detail">Translates raw web URLs into high-contrast scannable QR code matrices.</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tier 3: Hard / Advanced -->
+            <div class="tier-column">
+              <div class="tier-badge level-hard">LEVEL 03: HARD / ADVANCED</div>
+              <p class="tier-summary">Intelligent automation, speech processing, and agentic assistant execution.</p>
+              
+              <ul class="project-list">
+                <li class="project-item hard-highlight" data-cursor="hover">
+                  <div class="proj-head">
+                    <span class="proj-name">Ai-Powered-Virtual-Assistant</span>
+                    <span class="proj-category star-cat">★ ADVANCED AI</span>
+                  </div>
+                  <p class="proj-detail">
+                    An intelligent virtual assistant capable of natural speech recognition, task execution, web searches, application control, and automated query answering. Engineered with modular voice input/output pipelines and contextual command routing.
+                  </p>
+                  <div class="flagship-tags mini-tags">
+                    <span class="tech-tag">SpeechRecognition</span>
+                    <span class="tech-tag">NLP Logic</span>
+                    <span class="tech-tag">OS Automation</span>
+                    <span class="tech-tag">Pyttsx3</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section class="certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-num">05 // RECOGNITION</span>
+          <div class="mask-reveal-wrap">
+            <h2 class="section-title reveal-text">CERTIFICATIONS & MILESTONES</h2>
+          </div>
+          <p class="section-subtitle">Formal credentials, professional internships, and hackathon accomplishments.</p>
+        </div>
+
+        <div class="cert-grid">
+
+          <!-- 1. Outskill GenAI -->
+          <div class="cert-card reveal-on-scroll" data-cursor="hover">
+            <div class="cert-top">
+              <div class="cert-org-badge outskill-badge">
+                <svg viewBox="0 0 24 24" class="cert-svg" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span>OUTSKILL</span>
+              </div>
+              <span class="cert-date">MARCH 2026</span>
+            </div>
+            <h3 class="cert-title">Generative AI Mastermind</h3>
+            <p class="cert-issuer">Completed intensive 16-hour specialized mastery program in generative models, prompt architecture, and LLM implementations.</p>
+            <div class="cert-footer">
+              <span class="cert-chip">16 Hours Comprehensive</span>
+            </div>
+          </div>
+
+          <!-- 2. SEMS Welfare Foundation -->
+          <div class="cert-card reveal-on-scroll" data-cursor="hover">
+            <div class="cert-top">
+              <div class="cert-org-badge sems-badge">
+                <svg viewBox="0 0 24 24" class="cert-svg" fill="currentColor">
+                  <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                </svg>
+                <span>SEMS FOUNDATION</span>
+              </div>
+              <span class="cert-date">JUNE – AUG 2026</span>
+            </div>
+            <h3 class="cert-title">Market Research & Management Internship</h3>
+            <p class="cert-issuer">SEMS Welfare Foundation • Conducted strategic analysis, consumer demographic insights, and operational management workflows.</p>
+            <div class="cert-footer">
+              <span class="cert-chip">Industry Internship</span>
+            </div>
+          </div>
+
+          <!-- 3. SIH Hackathon -->
+          <div class="cert-card reveal-on-scroll" data-cursor="hover">
+            <div class="cert-top">
+              <div class="cert-org-badge sih-badge">
+                <svg viewBox="0 0 24 24" class="cert-svg" fill="currentColor">
+                  <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                </svg>
+                <span>SIH 2025</span>
+              </div>
+              <span class="cert-date">2025</span>
+            </div>
+            <h3 class="cert-title">Smart India Hackathon (SIH) Internal Hackathon</h3>
+            <p class="cert-issuer">IILM University • Certificate of Participation & University Level selection for high-impact innovation prototype.</p>
+            <div class="cert-footer">
+              <span class="cert-chip">Competitive Hackathon</span>
+            </div>
+          </div>
+
+          <!-- 4. Words in the Garden -->
+          <div class="cert-card reveal-on-scroll" data-cursor="hover">
+            <div class="cert-top">
+              <div class="cert-org-badge iilm-badge">
+                <svg viewBox="0 0 24 24" class="cert-svg" fill="currentColor">
+                  <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                </svg>
+                <span>IILM DELEGATE</span>
+              </div>
+              <span class="cert-date">FEBRUARY 2026</span>
+            </div>
+            <h3 class="cert-title">Words in the Garden Cultural Festival</h3>
+            <p class="cert-issuer">Represented IILM University at the prestigious cultural festival celebrating literature, thought leadership, and interdisciplinary dialogue.</p>
+            <div class="cert-footer">
+              <span class="cert-chip">University Delegation</span>
+            </div>
+          </div>
+
+          <!-- 5. NISM Financial Education -->
+          <div class="cert-card reveal-on-scroll" data-cursor="hover">
+            <div class="cert-top">
+              <div class="cert-org-badge nism-badge">
+                <svg viewBox="0 0 24 24" class="cert-svg" fill="currentColor">
+                  <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
+                  <path d="M4 19h16v2H4z"/>
+                </svg>
+                <span>NISM</span>
+              </div>
+              <span class="cert-date">OFFICIAL COURSE</span>
+            </div>
+            <h3 class="cert-title">Paisa Aur Aap - Financial Education</h3>
+            <p class="cert-issuer">National Institute of Securities Markets (NISM) • Hindi curriculum covering foundational monetary markets, investment principles, and savings discipline.</p>
+            <div class="cert-footer">
+              <span class="cert-chip">National Institute Certified</span>
+            </div>
+          </div>
+
+          <!-- 6. Udemy Environmental Management -->
+          <div class="cert-card reveal-on-scroll" data-cursor="hover">
+            <div class="cert-top">
+              <div class="cert-org-badge udemy-badge">
+                <svg viewBox="0 0 24 24" class="cert-svg" fill="currentColor">
+                  <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/>
+                </svg>
+                <span>UDEMY ACADEMY</span>
+              </div>
+              <span class="cert-date">COURSEWORK</span>
+            </div>
+            <h3 class="cert-title">Environment Management</h3>
+            <p class="cert-issuer">Instructed by Dr. Keshav Mohan • Environmental sustainability methodologies, resource stewardship, and ecological compliance.</p>
+            <div class="cert-footer">
+              <span class="cert-chip">Sustainability Certified</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Endorsements & Peer Feedback (Horizontal Scroll Track) -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-num">06 // ENDORSEMENTS</span>
+          <div class="mask-reveal-wrap">
+            <h2 class="section-title reveal-text">PEER & FACULTY RECOGNITION</h2>
+          </div>
+          <p class="section-subtitle">Perspectives on technical rigor, curiosity, and collaborative problem solving.</p>
+        </div>
+
+        <div class="testimonial-horizontal-wrap">
+          <div class="testimonial-cards-track">
+            
+            <div class="testimonial-card" data-cursor="hover">
+              <div class="quote-mark">“</div>
+              <p class="test-quote">
+                "Yash demonstrates exceptional curiosity and methodical thinking when deconstructing complex Python architectures. His proactive contribution to SIH and club projects reflects high potential."
+              </p>
+              <div class="test-author">
+                <strong>Faculty Mentor</strong>
+                <span>School of Computer Science, IILM University</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card" data-cursor="hover">
+              <div class="quote-mark">“</div>
+              <p class="test-quote">
+                "During his market research and management tenure, Yash consistently brought data-driven discipline and sharp analytical insights to team briefs and organizational workflows."
+              </p>
+              <div class="test-author">
+                <strong>Project Coordinator</strong>
+                <span>SEMS Welfare Foundation</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card" data-cursor="hover">
+              <div class="quote-mark">“</div>
+              <p class="test-quote">
+                "WeatherGPT's integration of IMD real-time data with rural IVR telephony represents genuine empathy-driven engineering. Great execution of practical AI."
+              </p>
+              <div class="test-author">
+                <strong>Technical Lead</strong>
+                <span>AIgnite Innovation Cell</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Contact / Footer (Mask Reveal on Giant Text) -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        
+        <!-- Left Big Callout -->
+        <div class="contact-left reveal-on-scroll">
+          <div class="mask-reveal-wrap">
+            <h2 class="contact-huge-title reveal-text">
+              LET'S<br>WORK<br><span class="title-faded">TOGETHER</span>
+            </h2>
+          </div>
+          <p class="contact-subtext">
+            Have a project in mind? Looking for a partner to help build your next big idea? I'm always open to discussing new opportunities, internship roles, and technical challenges.
+          </p>
+          
+          <div class="contact-badges-row">
+            <a href="https://www.linkedin.com/in/yash-srivastava-691a2337a" target="_blank" rel="noopener noreferrer" class="contact-mini-btn" title="LinkedIn" data-cursor="hover">
+              in
+            </a>
+            <a href="https://github.com/yashshiv2006-web" target="_blank" rel="noopener noreferrer" class="contact-mini-btn" title="GitHub" data-cursor="hover">
+              gh
+            </a>
+            <a href="mailto:yashshiv2006@gmail.com" class="contact-mini-btn" title="Email" data-cursor="hover">
+              @
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Contact Interaction Details -->
+        <div class="contact-right reveal-on-scroll">
+          <div class="contact-email-card" data-cursor="hover">
+            <div class="card-icon-line">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <span class="arrow-up-right">↗</span>
+            </div>
+
+            <div class="drop-line-label">DROP ME A LINE</div>
+            
+            <a href="mailto:yashshiv2006@gmail.com" class="giant-email-link" data-cursor="hover">
+              YASHSHIV2006<br>@GMAIL.COM
+            </a>
+
+            <div class="contact-meta-links">
+              <a href="mailto:yashshiv2006@gmail.com" class="copy-address-pill" data-cursor="hover">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                </svg>
+                <span>OPEN EMAIL CLIENT</span>
+              </a>
+
+              <a href="tel:+918126463927" class="copy-address-pill" data-cursor="hover">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>+91 8126463927</span>
+              </a>
+            </div>
+
+            <div class="contact-secondary-details">
+              <div class="detail-item">
+                <span class="detail-label">INSTITUTIONAL EMAIL</span>
+                <span class="detail-val">yash.srivastava.ug25@iilm.edu</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">CAMPUS BASE</span>
+                <span class="detail-val">IILM University, Sector-56, Gurugram, Haryana</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">GITHUB REPOSITORIES</span>
+                <a href="https://github.com/yashshiv2006-web" target="_blank" class="detail-link" data-cursor="hover">github.com/yashshiv2006-web</a>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">LINKEDIN CONNECT</span>
+                <a href="https://www.linkedin.com/in/yash-srivastava-691a2337a" target="_blank" class="detail-link" data-cursor="hover">linkedin.com/in/yash-srivastava</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Technical Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-logo">DevByYash</span>
+        <span class="footer-copy">© 2026 Yash Srivastava. Engineered with precision HTML & CSS.</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-status">● SYSTEM ALL GREEN • GURUGRAM, IN</span>
+        <a href="#hero" class="back-to-top" data-cursor="hover">TOP ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimalist Interaction Enhancements (Cursor Tracking, Parallax & Scroll Triggers) -->
+  <script>
+    // 1. Custom Smooth Trailing Cursor
+    (function initCursor() {
+      const cursor = document.getElementById('customCursor');
+      const follower = document.getElementById('cursorFollower');
+      if (!cursor || !follower) return;
+
+      let mouseX = -100, mouseY = -100;
+      let followerX = -100, followerY = -100;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+      });
+
+      function renderFollower() {
+        followerX += (mouseX - followerX) * 0.18;
+        followerY += (mouseY - followerY) * 0.18;
+        follower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0)`;
+        requestAnimationFrame(renderFollower);
+      }
+      requestAnimationFrame(renderFollower);
+
+      // Cursor hover states for interactive elements
+      document.querySelectorAll('[data-cursor="hover"], a, button, .skill-card, .cert-card, .project-item').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.classList.add('cursor-active');
+          follower.classList.add('follower-active');
+        });
+        el.addEventListener('mouseleave', () => {
+          cursor.classList.remove('cursor-active');
+          follower.classList.remove('follower-active');
+        });
+      });
+    })();
+
+    // 2. Floating Cursor-Following Speech Bubble Tooltip for Project Cards
+    (function initProjectTooltip() {
+      const tooltip = document.getElementById('projectTooltip');
+      const tooltipBadge = document.getElementById('tooltipBadge');
+      const tooltipText = document.getElementById('tooltipText');
+      if (!tooltip || !tooltipBadge || !tooltipText) return;
+
+      let mouseX = -200, mouseY = -200;
+      let tipX = -200, tipY = -200;
+      let isInsideCard = false;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      // Smooth Lerp (Linear Interpolation) loop for floating rubber-band glide
+      function renderTooltip() {
+        if (isInsideCard) {
+          // Mathematically offset tooltip +20px so pointer/arrow is never covered
+          const targetX = mouseX + 20;
+          const targetY = mouseY + 20;
+          tipX += (targetX - tipX) * 0.16;
+          tipY += (targetY - tipY) * 0.16;
+          tooltip.style.transform = `translate3d(${tipX}px, ${tipY}px, 0)`;
+        }
+        requestAnimationFrame(renderTooltip);
+      }
+      requestAnimationFrame(renderTooltip);
+
+      // Boundary triggers (mouseenter / mouseleave) on project cards
+      const projectCards = document.querySelectorAll('.flagship-card, .secondary-project-card, .project-item');
+      projectCards.forEach(card => {
+        card.addEventListener('mouseenter', (e) => {
+          isInsideCard = true;
+          tipX = e.clientX + 20;
+          tipY = e.clientY + 20;
+          tooltip.style.transform = `translate3d(${tipX}px, ${tipY}px, 0)`;
+
+          const badge = card.getAttribute('data-tooltip-badge') || 'Project';
+          const text = card.getAttribute('data-tooltip-text') || 'Read the case study';
+          tooltipBadge.textContent = badge;
+          tooltipText.textContent = text;
+          
+          tooltip.classList.add('is-active');
+        });
+
+        card.addEventListener('mouseleave', () => {
+          isInsideCard = false;
+          tooltip.classList.remove('is-active');
+        });
+      });
+    })();
+
+    // 3. Lenis Smooth Inertia Scrolling with Edge-Only Velocity Blur
+    let lenis;
+    const edgeBlurTop = document.getElementById('edgeBlurTop');
+    const edgeBlurBottom = document.getElementById('edgeBlurBottom');
+    let currentEdgeBlur = 0;
+    let targetEdgeBlur = 0;
+
+    if (typeof Lenis !== 'undefined') {
+      lenis = new Lenis({
+        duration: 1.25, // spring glide duration
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // exponential spring glide
+        direction: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 0.95,
+        touchMultiplier: 1.5,
+      });
+
+      // Track exact real-time velocity for Edge-Only Motion Blur (Center remains crystal clear)
+      lenis.on('scroll', ({ velocity }) => {
+        const speed = Math.abs(velocity);
+        // Map speed to edge blur intensity (up to 12px max on screen borders)
+        targetEdgeBlur = Math.min(12, speed * 0.7);
+
+        // Parallax hero image update
+        const heroImg = document.getElementById('heroProfileImg');
+        const scrollY = window.scrollY || window.pageYOffset;
+        if (heroImg && scrollY < 900) {
+          heroImg.style.transform = `scale(1.05) translateY(${scrollY * 0.12}px)`;
+        }
+
+        // Project mockup scale on scroll
+        const mockup = document.getElementById('mockupScreen');
+        if (mockup) {
+          const rect = mockup.getBoundingClientRect();
+          const inViewRatio = Math.max(0, Math.min(1, 1 - Math.abs(rect.top - window.innerHeight / 2) / (window.innerHeight / 1.5)));
+          const scaleVal = 0.98 + (inViewRatio * 0.04);
+          mockup.style.transform = `scale(${scaleVal})`;
+        }
+      });
+
+      // Smooth Animation Frame Loop for Edge Blur
+      function lenisRaf(time) {
+        lenis.raf(time);
+
+        // Smoothly lerp edge blur back to 0 when velocity drops (spring settling)
+        currentEdgeBlur += (targetEdgeBlur - currentEdgeBlur) * 0.18;
+        targetEdgeBlur *= 0.88; // decay momentum
+
+        if (edgeBlurTop && edgeBlurBottom) {
+          if (currentEdgeBlur > 0.15) {
+            const blurPx = `${currentEdgeBlur.toFixed(1)}px`;
+            const opacityVal = Math.min(1, currentEdgeBlur / 3.5);
+            edgeBlurTop.style.setProperty('--edge-blur-amount', blurPx);
+            edgeBlurBottom.style.setProperty('--edge-blur-amount', blurPx);
+            edgeBlurTop.style.opacity = opacityVal;
+            edgeBlurBottom.style.opacity = opacityVal;
+          } else {
+            edgeBlurTop.style.opacity = '0';
+            edgeBlurBottom.style.opacity = '0';
+          }
+        }
+
+        requestAnimationFrame(lenisRaf);
+      }
+      requestAnimationFrame(lenisRaf);
+    } else {
+      // Fallback native scroll listener if offline
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const heroImg = document.getElementById('heroProfileImg');
+        if (heroImg && scrollY < 900) {
+          heroImg.style.transform = `scale(1.05) translateY(${scrollY * 0.12}px)`;
+        }
+      }, { passive: true });
+    }
+
+    // 4. Intersection Observer for Scroll Reveals & Staggered Animations
+    (function initObserver() {
+      const revealItems = document.querySelectorAll('.reveal-on-scroll, .reveal-text, .staggered-group');
+      if (!('IntersectionObserver' in window)) {
+        revealItems.forEach(el => el.classList.add('is-revealed'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealItems.forEach(el => observer.observe(el));
+    })();
+
+    // 5. Multi-Theme Switcher Controller (Light Parchment, Dark Noir, Dark Midnight OLED)
+    (function initThemeSwitcher() {
+      const buttons = document.querySelectorAll('.theme-btn');
+      const htmlEl = document.documentElement;
+      let activeTheme = localStorage.getItem('yash_portfolio_theme') || 'light';
+
+      function setTheme(theme) {
+        htmlEl.classList.add('theme-transition');
+        htmlEl.setAttribute('data-theme', theme);
+        activeTheme = theme;
+        try {
+          localStorage.setItem('yash_portfolio_theme', theme);
+        } catch (e) {}
+
+        buttons.forEach(btn => {
+          if (btn.getAttribute('data-theme') === theme) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-checked', 'true');
+          } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-checked', 'false');
+          }
+        });
+
+        setTimeout(() => {
+          htmlEl.classList.remove('theme-transition');
+        }, 350);
+      }
+
+      setTheme(activeTheme);
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = btn.getAttribute('data-theme');
+          if (target && target !== activeTheme) {
+            setTheme(target);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
